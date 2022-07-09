@@ -223,3 +223,12 @@ class StaticScheduler(BgpDrAgentFilter):
 
     def __init__(self):
         super(StaticScheduler, self).__init__()
+
+    def schedule_all_unscheduled_bgp_speakers(self, context):
+        return True
+
+    def schedule_unscheduled_bgp_speakers(self, context, host):
+        return True
+
+    def select(self, **kwargs):
+        return True
